@@ -3,6 +3,10 @@ import styled from 'styled-components';
 
 const Div = styled.div`
   display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
   background-color: #000;
 `
 
@@ -17,7 +21,8 @@ const Li = styled.li`
   text-align: left;
 `
 
-const Logo = styled(Div)`
+const Logo = styled.div`
+  display: flex;
   align-items: center;
   margin-left: 24px;
   color: #FFF;

@@ -3,6 +3,11 @@ import styled from 'styled-components';
 
 import ReactGallery from 'react-grid-gallery';
 
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+`
+
 const Gallery = ({images}) => {
   const ref = useRef(null);
 
@@ -12,12 +17,12 @@ const Gallery = ({images}) => {
   }, [ref.current]);
 
   return (
-    <div ref={ref} >
+    <Container ref={ref} className="image-gallery">
       <ReactGallery
         images={images}
         enableImageSelection={false}
       />
-    </div>
+    </Container>
   )
 }
 

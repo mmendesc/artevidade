@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import Navbar from './components/navbar';
 import Gallery from './components/gallery';
 
-import './App.css';
+import './App.scss';
 
 const IMAGES =
 [{
@@ -34,23 +34,11 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <Gallery
-        images={IMAGES}
-      />
+      <div className="main-content">
+        <Gallery
+          images={IMAGES.concat(IMAGES).concat(IMAGES)}
+        />
+      </div>
     </div>
   );
 }
